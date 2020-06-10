@@ -45,3 +45,14 @@ Rode o comando ```npm install``` para instalar as dependências de front
 Rode o comando ```ng serve``` para rodar o servidor do frontend
 
 Para desativar o pipenv basta usar o comando ```exit``` ou ```Ctrl+d```
+
+### Acessando o projeto
+
+#### http://127.0.0.1:4200/signup
+Cria um usuário para acessar a aplicação
+
+### http://127.0.0.1:4200/
+Acessa a aplicação através de um login
+Clique no X para remover um usuário
+Use o formulário para criar um outro usuário
+A lista de usuários aparece acima do formulário
