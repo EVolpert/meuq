@@ -131,8 +131,13 @@ JWT_AUTH = {
     'JWT_EXPIRATION_DELTA': timedelta(days=2),
 }
 
+# allauth
+
 SITE_ID = 1
 ACCOUNT_EMAIL_VERIFICATION = 'none'
+
+# JWT settings
+
 REST_USE_JWT = True
 
 # Internationalization
