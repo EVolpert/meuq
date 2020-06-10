@@ -13,7 +13,7 @@ import { environment } from '../environments/environment';
 @Injectable()
 export class AuthService {
 
-  private apiRoot = 'http://localhost:8000/auth/';
+  private apiRoot = 'http://127.0.0.1:8000/auth/';
 
   constructor(private http: HttpClient) { }
 
@@ -41,7 +41,13 @@ export class AuthService {
   }
 
   signup(username: string, email: string, password1: string, password2: string) {
-    // TODO: implement signup
+    return this.http.post(
+      this.apiRoot.concat('signup/'),
+      { username, email, password1, password2 }
+    ).pipe(
+      tap(response => this.setSession(response)),
+      shareReplay(),
+    );
   }
 
   logout() {
